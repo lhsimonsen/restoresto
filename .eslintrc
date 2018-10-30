@@ -56,7 +56,7 @@
     "import": 0,
     "func-names": 0,
     "space-before-function-paren": 2,
-    "comma-dangle": 1,
+    "comma-dangle": 0,
     "max-len": 0,
     "import/extensions": 0,
     "no-underscore-dangle": 2,
@@ -104,9 +104,8 @@
     "prettier/prettier": [
       "error",
       {
-        "trailingComma": "es5",
         "singleQuote": true,
-        "printWidth": 80,
+        "printWidth": 80
       }
     ],
     "jsx-a11y/href-no-hash": "off",
@@ -120,7 +119,6 @@
     ]
   },
   "plugins": [
-    // "html",
     "prettier"
   ]
 }
