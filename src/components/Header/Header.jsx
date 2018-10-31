@@ -4,13 +4,34 @@ import styled from 'react-emotion';
 import { Link } from 'react-router-dom';
 
 const Wrapper = styled('ul')`
-  background-color: #222;
+  background-color: #fff;
+  list-style: none;
   display: flex;
+  flex-direction: column;
+  padding: 1rem;
+
+  @media (min-width: 48em) {
+    flex-direction: row;
+    justify-content: flex-end;
+    padding: 1.5rem 4rem;
+  }
 `;
 
 export const NavLink = styled('li')`
-  color: #fff;
-  flex: 1;
+  margin-left: 0;
+  margin-bottom: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1rem;
+  font-size: 0.75rem;
+
+  > a {
+    color: #222;
+  }
+
+  @media (min-width: 48em) {
+    margin-left: 3rem;
+    margin-bottom: 0;
+  }
 `;
 
 const Header = () => (
