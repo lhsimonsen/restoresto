@@ -1,24 +1,12 @@
 /* eslint-disable class-methods-use-this */
 import React from 'react';
 import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
+import Header from './components/Header/Header';
 
 const Index = () => <h2>Home</h2>;
 const About = () => <h2>About</h2>;
 const Booking = () => <h2>Booking</h2>;
 const Contact = () => <h2>Contact</h2>;
-const Header = () => (
-  <ul>
-    <li>
-      <Link to="/">Home</Link>
-    </li>
-    <li>
-      <Link to="/about">About</Link>
-    </li>
-    <li>
-      <Link to="/booking">Booking</Link>
-    </li>
-  </ul>
-);
 
 const AppRouter = () => (
   <Router>
