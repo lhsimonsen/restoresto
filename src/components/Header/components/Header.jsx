@@ -1,7 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import styled from 'react-emotion';
+import styled, { css } from 'react-emotion';
 import { Link } from 'react-router-dom';
+import { MdMenu, MdClose } from 'react-icons/md';
 
 const Wrapper = styled('ul')`
   background-color: #fff;
@@ -50,7 +51,17 @@ export const NavLink = styled('li')`
   }
 `;
 
-const Header = () => (
+export const Menu = styled('span')`
+  position: absolute;
+  top: 1.5rem;
+  right: 1.5rem;
+
+  @media (min-width: 48em) {
+    display: none;
+  }
+`;
+
+const Header = ({ onOpen, isOpen }) => (
   <Wrapper>
     <Inner>
       <NavLink>
@@ -62,10 +73,14 @@ const Header = () => (
       <NavLink>
         <Link to="/booking">Booking</Link>
       </NavLink>
+      <Menu onClick={onOpen}>{isOpen ? <MdClose /> : <MdMenu />}</Menu>
     </Inner>
   </Wrapper>
 );
 
-Header.propTypes = {};
+Header.propTypes = {
+  onOpen: PropTypes.func,
+  isOpen: PropTypes.bool
+};
 
 export default Header;

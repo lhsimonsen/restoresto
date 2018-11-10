@@ -2,7 +2,7 @@
 import React from 'react';
 import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
 import styled from 'react-emotion';
-import Header from './components/Header/Header';
+import Header from './components/Header/containers/HeaderContainer';
 import hoze from './images/hoze.jpg';
 
 const About = () => <h2>About</h2>;

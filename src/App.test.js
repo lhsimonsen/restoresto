@@ -2,7 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import { shallow } from 'enzyme';
 import App from './App';
-import Header from './components/Header/Header';
+import Header from './components/Header/containers/HeaderContainer';
 
 describe('App', () => {
   it('renders without crashing', () => {
