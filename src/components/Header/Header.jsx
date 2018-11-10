@@ -5,15 +5,31 @@ import { Link } from 'react-router-dom';
 
 const Wrapper = styled('ul')`
   background-color: #fff;
+  height: 100%;
   list-style: none;
-  display: flex;
-  flex-direction: column;
-  padding: 1rem;
+  position: absolute;
+  width: 100%;
 
   @media (min-width: 48em) {
+    height: auto;
+    width: auto;
+  }
+`;
+
+const Inner = styled('div')`
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  justify-content: center;
+
+  @media (min-width: 48em) {
+    align-items: right;
     flex-direction: row;
+    height: auto;
     justify-content: flex-end;
-    padding: 1.5rem 4rem;
+    padding: 1.5rem 2rem;
+    width: 100vw;
   }
 `;
 
@@ -36,15 +52,17 @@ export const NavLink = styled('li')`
 
 const Header = () => (
   <Wrapper>
-    <NavLink>
-      <Link to="/">Home</Link>
-    </NavLink>
-    <NavLink>
-      <Link to="/about">About</Link>
-    </NavLink>
-    <NavLink>
-      <Link to="/booking">Booking</Link>
-    </NavLink>
+    <Inner>
+      <NavLink>
+        <Link to="/">Home</Link>
+      </NavLink>
+      <NavLink>
+        <Link to="/about">About</Link>
+      </NavLink>
+      <NavLink>
+        <Link to="/booking">Booking</Link>
+      </NavLink>
+    </Inner>
   </Wrapper>
 );
 
