@@ -50,20 +50,24 @@ export const NavLink = styled('li')`
   }
 `;
 
-const Header = () => (
+const Header = ({ onNavigate }) => (
   <Wrapper>
     <Inner>
-      <NavLink>
+      <NavLink onClick={onNavigate}>
         <Link to="/">Home</Link>
       </NavLink>
-      <NavLink>
+      <NavLink onClick={onNavigate}>
         <Link to="/about">About</Link>
       </NavLink>
-      <NavLink>
+      <NavLink onClick={onNavigate}>
         <Link to="/booking">Booking</Link>
       </NavLink>
     </Inner>
   </Wrapper>
 );
+
+Header.propTypes = {
+  onNavigate: PropTypes.func
+};
 
 export default Header;
