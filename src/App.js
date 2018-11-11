@@ -19,7 +19,6 @@ const AppRouter = () => (
   <Router>
     <div>
       <Header />
-
       <Route path="/" exact component={Index} />
       <Route path="/about/" component={About} />
       <Route path="/booking/" component={Booking} />
